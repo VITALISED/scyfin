@@ -982,9 +982,6 @@ html,
 
 
 /* Music Player */
-.layout-desktop .appfooter {
-    margin-left: 250px !important;
-}
 .layout-desktop .appfooter .nowPlayingBarInfoContainer {
     margin-left: 10px !important;
 }
@@ -1152,6 +1149,13 @@ html,
 .layout-desktop:has(#itemDetailPage.noBackdropTransparency) .mainDrawer {
     background: var(--secondary-background-color) !important;
 }
+
+/* Transparent footer */
+.appfooter {
+    background-color: var(--primary-background-transparent) !important;
+    backdrop-filter: blur(var(--blur)) !important;
+}
+
 /* Fix for JMP */
 @supports not selector(:has(*)) {
     .layout-desktop .backgroundContainer.withBackdrop + div .mainDrawer {
